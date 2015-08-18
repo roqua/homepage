@@ -17,9 +17,9 @@ compile '*' do
   if item[:extension] == 'sass'
     filter :sass
   elsif item.binary?
-    # don’t filter binary items
+    # don’t filter binary item
   else
-    filter :erb
+    filter :haml
     layout 'default'
   end
 end
