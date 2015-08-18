@@ -4,6 +4,7 @@ gem 'nanoc'
 gem 'adsf'
 gem 'sass'
 gem 'haml'
+gem 'coffee-script'
 
 group :development do
   gem 'guard-bundler'
