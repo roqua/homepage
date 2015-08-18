@@ -4,4 +4,9 @@ gem 'nanoc'
 gem 'adsf'
 gem 'sass'
 gem 'haml'
-gem 'guard-bundler'
+
+group :development do
+  gem 'guard-bundler'
+  gem 'guard-process'
+  gem 'guard-nanoc'
+end
