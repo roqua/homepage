@@ -41,4 +41,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :haml

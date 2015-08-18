@@ -1,29 +1,28 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>A Brand New nanoc Site - <%= @item[:title] %></title>
-    <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
-
-    <!-- you don't need to keep this, but it's cool for stats! -->
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
-  </head>
-  <body>
-    <div id="main">
-      <%= yield %>
-    </div>
-    <div id="sidebar">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="http://nanoc.ws/docs/">Documentation</a></li>
-        <li><a href="http://nanoc.ws/docs/tutorial/">Getting Started</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
-        <li><a href="http://github.com/nanoc/nanoc/wiki/">Wiki</a></li>
-      </ul>
-    </div>
-  </body>
-</html>
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %title
+        A Brand New nanoc Site - #{@item[:title]}
+      %link{:href => @items['/stylesheets/application/'].path, :rel => "stylesheet"}
+      %script{:src => @items['/javascripts/application/'].path}
+        / you don't need to keep this, but it's cool for stats!
+        %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
+  %body
+    #main
+      = yield
+    #sidebar
+      %h2 Documentation
+      %ul
+        %li
+          %a{:href => "http://nanoc.ws/docs/"} Documentation
+        %li
+          %a{:href => "http://nanoc.ws/docs/tutorial/"} Getting Started
+      %h2 Community
+      %ul
+        %li
+          %a{:href => "http://groups.google.com/group/nanoc/"} Discussion Group
+        %li
+          %a{:href => "irc://chat.freenode.net/#nanoc"} IRC Channel
+        %li
+          %a{:href => "http://github.com/nanoc/nanoc/wiki/"} Wiki
