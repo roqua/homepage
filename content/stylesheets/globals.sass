@@ -1,0 +1,226 @@
+// @import "components/color"
+$sky: #03afea
+$dark-sky: #01a0de
+$sunset: #f4664c
+$ocean: #1fc5c3
+$beach: #f4c74c
+$primary-color: $sky !default
+$dark-gray: #555
+$black-ish: #181818
+// @import "materialize"
+
+body
+  min-height: 100vh
+*
+  box-sizing: border-box
+//colors
+.sky
+  background-color: $sky
+  color: white
+.sky-font
+  color: $sky
+.dark-sky
+  background-color: $dark-sky
+  color: white
+.dark-sky-font
+  color: $dark-sky
+.sunset
+  background-color: $sunset
+  color: white
+.sunset-font
+  color: $sunset
+.ocean
+  background-color: $ocean
+  color: white
+.ocean-font
+  color: $ocean
+.sunset
+  background-color: $sunset
+  color: white
+.sunset-font
+  color: $sunset
+.beach
+  background-color: $beach
+  color: white
+.beach-font
+  color: $beach
+.whitesmoke
+  background-color: whitesmoke
+  color: #555
+  h5
+    color: $sky
+
+//grays
+.black-ish
+  background-color: $black-ish
+  color: white
+.dark-gray
+  background-color: $dark-gray
+  color: white
+.dark-gray-font
+  color: $dark-gray
+.gray
+  background-color: gray
+  color: white
+.gray-font
+  color: gray
+.silver
+  background-color: silver
+  color: white
+.silver-font
+  color: silver
+.gainsboro
+  background-color: gainsboro
+.gainsboro-font
+  color: gainsboro
+.whitesmoke
+  background-color: whitesmoke
+  color: #555
+  h5
+    color: $sky
+
+.btn.whitesmoke:hover
+  background-color: white
+
+.nav-f
+  box-shadow: none
+  -webkit-box-shadow: none
+  transition: box-shadow 0.8s
+  transition: height 0.4s
+  height: 80px
+  line-height: 80px
+  .brand-logo
+    img
+      height: 76px
+      transition: height 0.4s
+  
+.nav-f.scrolled
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+  height: 64px
+  line-height: 64px
+  .brand-logo
+    img
+      height: 60px
+
+nav ul a
+  font-size: 1.2rem
+  color: #FFF
+  letter-spacing: 2px
+  display: block
+  font-weight: 300
+  padding: 0 15px
+
+// forms
+.input-field input[type=text]:focus
+  border-bottom: 1px solid $ocean
+.input-field input[type=text].invalid
+  border-bottom: 1px solid $sunset
+
+//smaller font-size for card titles
+.card .card-title 
+  font-size: 18px
+// change size of flow text
+.flow-text
+  font-weight: 300
+  @media only screen and (min-width: 360px)
+    font-size: 1.2rem
+  @media only screen and (min-width: 390px)
+    font-size: 1.224rem
+  @media only screen and (min-width: 420px)
+    font-size: 1.248rem
+  @media only screen and (min-width: 450px)
+    font-size: 1.272rem
+  @media only screen and (min-width: 480px)
+    font-size: 1.296rem
+  @media only screen and (min-width: 510px)
+    font-size: 1.32rem
+  @media only screen and (min-width: 540px)
+    font-size: 1.344rem
+  @media only screen and (min-width: 570px)
+    font-size: 1.368rem
+  @media only screen and (min-width: 600px)
+    font-size: 1.392rem
+  @media only screen and (min-width: 630px)
+    font-size: 1.416rem
+  @media only screen and (min-width: 660px)
+    font-size: 1.44rem
+  @media only screen and (min-width: 690px)
+    font-size: 1.464rem
+  @media only screen and (min-width: 720px)
+    font-size: 1.488rem
+  //from here we are going with a smaller flow-text
+  @media only screen and (min-width: 750px)
+    font-size: 1.305rem
+  @media only screen and (min-width: 780px)
+    font-size: 1.331rem
+  @media only screen and (min-width: 810px)
+    font-size: 1.357rem
+  @media only screen and (min-width: 840px)
+    font-size: 1.384rem
+  @media only screen and (min-width: 870px)
+    font-size: 1.412rem
+  @media only screen and (min-width: 900px)
+    font-size: 1.44rem
+  @media only screen and (min-width: 930px)
+    font-size: 1.468rem
+  @media only screen and (min-width: 960px)
+    font-size: 1.498rem
+  @media only screen and (max-width: 360px)
+    font-size: 1.2rem 
+
+//dropcaps
+p.dropcap,
+p.dropcap-border
+  font-weight: 300
+p.dropcap:first-child:first-letter,
+p.dropcap-border:first-child:first-letter
+  float: left
+  font-size: 55px
+  line-height: 57px
+  padding: 4px 14px 1px 12px
+  margin-right: 6px
+  font-weight: condensed
+  border: 2px solid $ocean
+p.dropcap:first-child:first-letter
+  background-color: $ocean
+  color: white
+p.dropcap-border:first-child:first-letter
+  background-color: white
+  color: $dark-gray
+@media only screen and (max-width: 992px)
+  p.dropcap:first-child:first-letter,
+  p.dropcap-border:first-child:first-letter
+    font-size: 52px
+    line-height: 54px
+    padding: 4px 12px 0px 10px
+// hero
+#index-banner,
+#rom-banner
+  min-height: 432px
+  max-height: 864px
+  position: relative
+  background-color: #03afea
+  background-image: linear-gradient(#03afea, #01a0de)
+  color: #fff
+#rom-banner.section
+  margin-bottom: 0px
+#rom-info.section
+  margin-top: 0px
+#mug-banner
+  min-height: 632px
+  position: relative
+  background-image: url("mugs.png")
+  background-position: left top
+  background-repeat: no-repeat
+  background-size: cover
+  color: $beach
+  h1
+    padding: 10px 0
+    margin-top: 40px
+@media only screen and (max-width: 600px)
+  #mug-banner
+    max-height: 300px
+    h1
+      font-size: 2.2rem
+      margin-bottom: -1px
+

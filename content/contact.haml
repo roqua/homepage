@@ -1,0 +1,34 @@
+---
+title: Contact
+---
+.container
+  .row
+    %h2 Contact
+    %p
+      Gebruik onderstaand formulier om ons een vraag te stellen of iets mede te delen. Wij nemen dan zo spoedig mogelijk contact met u op.
+    %p
+      Respondenten cq cliënten van GGZ instellingen die RoQua gebruiken kunnen het beste via hun eigen GGZ instelling reageren.
+
+    %p
+      Medewerkers van GGZ instellingen waar RoQua gebruikt wordt kunnen beter vanuit RoQua het vragenformulier gebruiken (in RoQua icoon linksonder).
+  .row
+    %form.col.s12
+      .row
+        .input-field.col.s6
+          %input#first_name.validate{:placeholder => "Placeholder", :type => "text"}
+            %label{:for => "first_name"} First Name
+        .input-field.col.s6
+          %input#last_name.validate{:type => "text"}
+            %label{:for => "last_name"} Last Name
+      .row
+        .input-field.col.s12
+          %input#email.validate{:type => "email"}
+            %label{:for => "email"} Email
+      .row
+        %form.col.s12
+          .row
+            .input-field.col.s12
+              %textarea#textarea1.materialize-textarea
+              %label{:for => "textarea1"} Bericht
+  .row
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9554.975548435397!2d6.574479066934211!3d53.2224403326102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd585710fd79%3A0xca97676f1a1ef7d5!2sUniversitair+Medisch+Centrum+Groningen!5e0!3m2!1snl!2snl!4v1439812112268", :style => "border:0", :width => "600"}

@@ -1,15 +1,60 @@
 ---
 title: Home
 ---
-%h1 A Brand New nanoc Site
-%p You’ve just created a new nanoc site. The page you are looking at right now is the home page for your site. To get started, consider replacing this default homepage with your own customized homepage. Some pointers on how to do so:
-%ul
-  %li
-    %p
-      %strong Change this page’s content
-      by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).
-  %li
-    %p
-      %strong> Change the layout
-      , which is the “default.html” file in the “layouts” directory, and create something unique (and hopefully less bland).
-%p If you need any help with customizing your nanoc web site, be sure to check out the documentation (see sidebar), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
+/ Hero
+#index-banner.section.no-pad-bot
+  .container
+    %h1.text_h.center.header.cd-headline.letters.type
+      %span We Love
+      %span.cd-words-wrapper.waiting
+        %b.is-visible Routine
+        %b Outcome
+        %b Monitoring
+
+#intro.section.scrollspy
+  .container
+    .row
+      .col.s12
+        %h2.center.header.text_h2
+          Lorem ipsum dolor sit amet
+          = succeed "vestibulum" do
+            %span.span_h2 Phasellus
+          lorem risus, nec suscipit lorem
+          %span.span_h2 laoreet quis.
+      .col.s12.m4.l4
+        .center.promo.promo-example
+          %i.mdi-image-flash-on.large.sunset-font
+          %h5.promo-caption Speeds up development
+          %p.light.center Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.
+      .col.s12.m4.l4
+        .center.promo.promo-example
+          %i.mdi-social-group.large.sunset-font
+          %h5.promo-caption User Experience Focused
+          %p.light.center Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      .col.s12.m4.l4
+        .center.promo.promo-example
+          %i.mdi-hardware-desktop-windows.large.sunset-font
+          %h5.promo-caption Fully responsive
+          %p.light.center Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+
+  .divider
+  .dark-sky
+    .container
+      .section
+        .row
+          %h2.center.header.text_h2
+            Lorem ipsum dolor
+          %p.flow-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+  #info.section.dark-gray-font
+    .container
+      .section
+        .row
+          .col.s12
+            %h2.text_h.center magnis dis parturient montes
+          .col.s12.m6.l4
+            / = image_tag("ploatie.png")
+            / %img{:alt => "Something" :src => "ploatie.png"}
+            ploatie
+          .col.s12.m6.l4.offset-l2
+            %p.dropcap-border Curabitur nec laoreet neque. Nullam et ante congue, eleifend nunc in, posuere mi. Aliquam luctus lacus lacus, ut scelerisque nibh bibendum a. Praesent ac placerat leo, ut fermentum erat. Aliquam egestas luctus ex at tristique. Aliquam ac elit non ipsum tincidunt imperdiet nec quis metus. Etiam arcu enim, dapibus id ex non, facilisis tempus neque. Fusce sed fermentum neque, et auctor lectus.
