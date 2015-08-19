@@ -1,0 +1,60 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title RoQua
+    %meta{"http-equiv" => "Content-Type", :content=>"text/html;charset=utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", "content" => "IE=edge"}
+    /Compiled and minified CSS
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css", :rel => "stylesheet"}
+    %link{:href => @items['/stylesheets/application/'].path, :rel => "stylesheet"}
+    %link{:href => @items['/stylesheets/globals/'].path, :rel => "stylesheet"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"}
+    %script{:src => @items['/javascripts/application/'].path}
+      / you don't need to keep this, but it's cool for stats!
+    %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
+  %body
+    %header
+      .navbar-fixed
+        %nav.nav-f
+          .container
+            .nav-wrapper
+              .brand-logo
+                Logo
+              /   / = image_tag("roqua_logo_t_w.png")
+              %a{:href => "#", class: 'button-collapse', 'data-activates' => 'mobile-demo'} 
+                %i.mdi-navigation-menu
+              %ul#nav-mobile.right.hide-on-med-and-down
+                <%= render '_top_menu' %>
+              %ul#mobile-demo.side-nav
+                <%= render '_top_menu' %>
+    %main
+      = yield
+
+    %footer.page-footer
+      .container
+        .row
+          .col.l3.s12
+            %h5.white-text Footer Content
+            %p.grey-text.text-lighten-4 Some text goes here
+          .col.l3.s12
+            %h5.white-text We are hiring
+            %p.white-text Word jij onze nieuwe collega?
+            .waves-effect.waves-light.btn.whitesmoke
+              %i.material-icons.right
+              %h6 
+                /# = link_to "Check t hier", pages_career_path
+          .col.l2.offset-l2.s12
+            %h5.white-text Links
+            %ul
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Link 1
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Link 2
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Link 3
+              %li
+                %a.grey-text.text-lighten-3{:href => "#!"} Link 4
+      .footer-copyright
+        .container
+          © 2015 Gegarandeerd php vrij
+

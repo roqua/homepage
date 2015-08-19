@@ -14,7 +14,7 @@
 #   because “*” matches zero or more characters.
 
 compile '*' do
-  if item[:extension] == 'sass'
+  if item[:extension] == 'sass' || item[:extension] == 'scss'
     filter :sass
   elsif item[:extension] == 'coffee'
     filter :coffeescript
@@ -27,7 +27,7 @@ compile '*' do
 end
 
 route '*' do
-  if item[:extension] == 'sass'
+  if item[:extension] == 'sass' || item[:extension] == 'scss'
     # Write item with identifier /foo/ to /foo.css
     item.identifier.chop + '.css'
   elsif item[:extension] == 'coffee'
