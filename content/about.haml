@@ -8,7 +8,7 @@ title: About
       .col.s6.m4.l3.offset-l1
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("erwin.jpg", class: "activator")
+            %img{:src => @items['/images/erwin/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Erwin
@@ -24,7 +24,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("sjoerd.png", class: "activator")
+            %img{:src => @items['/images/sjoerd/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Sjoerd
@@ -40,7 +40,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("jorn_cc.png", class: "activator")
+            %img{:src => @items['/images/jorn_cc/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Jorn
@@ -55,7 +55,7 @@ title: About
       .col.s6.m4.l3.offset-l1
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("herman.jpg", class: "activator")
+            %img{:src => @items['/images/herman/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Herman
@@ -69,7 +69,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("inge.png", class: "activator")
+            %img{:src => @items['/images/inge/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Marten
@@ -84,7 +84,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image
-            / = image_tag("henk.png", class: "activator")
+            %img{:src => @items['/images/henk/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Henk
@@ -99,7 +99,7 @@ title: About
       .col.s6.m4.l3.offset-l1
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("ivan.png", class: "activator")
+            %img{:src => @items['/images/ivan/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Ivan
@@ -114,7 +114,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("hester.png", class: "activator")
+            %img{:src => @items['/images/hester/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Hester
@@ -129,7 +129,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("ellen.png", class: "activator")
+            %img{:src => @items['/images/ellen/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Rivka
@@ -144,7 +144,7 @@ title: About
       .col.s6.m4.l3.offset-l1
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("rivka.png", class: "activator")
+            %img{:src => @items['/images/rivka/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Ellen
@@ -159,7 +159,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("marten.jpg", class: "activator")
+            %img{:src => @items['/images/marten/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Inge
@@ -173,7 +173,7 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
-            / = image_tag("jij.jpg", class: "activator")
+            %img{:src => @items['/images/jij/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
               Jij?
@@ -183,9 +183,8 @@ title: About
               Developer
               %i.mdi-navigation-close.right
             %p 
-              Wij zijn nog op zoek naar een developer, we nodigen je graag een keertje uit op de 
-              / = link_to 'thee of koffie!', pages_career_path
-              link thee koffie
+              Wij zijn nog op zoek naar een developer, we nodigen je graag een keertje uit op de
+              %a{:href => @items['/career/'].path} thee of koffie!
 
   .container
     .row

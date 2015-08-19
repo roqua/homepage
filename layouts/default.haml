@@ -19,9 +19,8 @@
           .container
             .nav-wrapper
               .brand-logo
-                Logo
-              /   / = image_tag("roqua_logo_t_w.png")
-              %a{:href => "#", class: 'button-collapse', 'data-activates' => 'mobile-demo'} 
+                %img{:src => @items['/images/roqua_logo_t_w/'].path}
+              %a{:href => "#", class: 'button-collapse', 'data-activates' => 'mobile-demo'}
                 %i.mdi-navigation-menu
               %ul#nav-mobile.right.hide-on-med-and-down
                 <%= render '_top_menu' %>
@@ -42,7 +41,7 @@
             .waves-effect.waves-light.btn.whitesmoke
               %i.material-icons.right
               %h6 
-                /# = link_to "Check t hier", pages_career_path
+                %a{:href => @items['/career/'].path} Check t hier
           .col.l2.offset-l2.s12
             %h5.white-text Links
             %ul
