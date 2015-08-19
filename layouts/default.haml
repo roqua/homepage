@@ -23,9 +23,9 @@
               %a{:href => "#", class: 'button-collapse', 'data-activates' => 'mobile-demo'}
                 %i.mdi-navigation-menu
               %ul#nav-mobile.right.hide-on-med-and-down
-                <%= render '_top_menu' %>
+                = render '_top_menu'
               %ul#mobile-demo.side-nav
-                <%= render '_top_menu' %>
+                = render '_top_menu'
     %main
       = yield
 
@@ -40,8 +40,8 @@
             %p.white-text Word jij onze nieuwe collega?
             .waves-effect.waves-light.btn.whitesmoke
               %i.material-icons.right
-              %h6 
-                %a{:href => @items['/career/'].path} Check t hier
+              %h6
+                = link_to 'Check t hier', @items['/career/'].path
           .col.l2.offset-l2.s12
             %h5.white-text Links
             %ul

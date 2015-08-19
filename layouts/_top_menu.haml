@@ -1,14 +1,12 @@
 %li
   .waves-effect.waves-block.waves-light
-    = nav_link @items.find { |i| i.identifier == '/' }
+    = link_to 'Home', @items['/'].path
 %li
   .waves-effect.waves-block.waves-light
-    = nav_link @items.find { |i| i.identifier == '/rom' }
-  / = link_to 'ROM', pages_rom_path, class: "waves-effect waves-block waves-light"
+    = link_to 'ROM', @items['/rom/'].path
 %li
   .waves-effect.waves-block.waves-light
-    = nav_link @items.find { |i| i.identifier == '/about' }
-  / = link_to 'Over ons', pages_about_path, class: "waves-effect waves-block waves-light"
+    = link_to 'About', @items['/about/'].path
 %li
   .waves-effect.waves-block.waves-light
-    = nav_link @items.find { |i| i.identifier == '/contact' }
+    = link_to 'Contact', @items['/contact/'].path
