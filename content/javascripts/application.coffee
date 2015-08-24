@@ -1,5 +1,5 @@
-# $(document).ready ->
-  # $('.button-collapse').sideNav()
+$(document).ready ->
+  $('.button-collapse').sideNav()
 
 $(window).scroll ->
   scroll = $(window).scrollTop()
