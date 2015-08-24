@@ -1,0 +1,58 @@
+@import "components/color"
+// heroes
+#index-banner,
+#rom-banner,
+#contact-banner,
+#about-banner
+  min-height: 432px
+  max-height: 864px
+  position: relative
+  background-color: #03afea
+  background-image: linear-gradient(#03afea, #01a0de)
+  color: #fff
+#index-banner,
+#rom-banner,
+#contact-banner,
+#about-banner
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: cover
+#index-banner
+  background-image: url("../images/index_hero.png")
+#rom-banner
+  background-image: url("../images/charts2.png")
+  background-position: center center
+#about-banner
+  background-image: url("../images/about2.png")
+  background-position: center bottom
+#contact-banner
+  background-image: url("../images/map.png")
+  background-position: center center
+#rom-banner.section
+  margin-bottom: 0px
+#rom-info.section
+  margin-top: 0px
+#mug-banner
+  min-height: 632px
+  position: relative
+  background-image: url("../images/mugs2.png")
+  background-position: left top
+  background-repeat: no-repeat
+  background-size: cover
+  color: $beach
+  h1
+    padding: 10px 0
+    margin-top: 40px
+@media only screen and (max-width: 600px)
+  #mug-banner
+    max-height: 300px
+    h1
+      font-size: 2.2rem
+      margin-bottom: -1px
+
+.functionalities
+  li
+    img
+      margin-bottom: 40px
+      margin-top: 10px
+
