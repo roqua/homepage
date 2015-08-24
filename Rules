@@ -14,8 +14,10 @@
 #   because “*” matches zero or more characters.
 
 compile '*' do
-  if item[:extension] == 'sass' || item[:extension] == 'scss'
+  if item[:extension] == 'sass'
     filter :sass
+  elsif  item[:extension] == 'scss'
+    filter :sass, syntax: :scss
   elsif item[:extension] == 'coffee'
     filter :coffeescript
   elsif item.binary?
