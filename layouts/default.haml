@@ -10,6 +10,7 @@
     %script{:src =>"https://code.jquery.com/jquery-2.1.1.min.js"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"}
     %script{:src => @items['/javascripts/application/'].path}
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", rel:"stylesheet"}
       / you don't need to keep this, but it's cool for stats!
     %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
   %body
@@ -24,9 +25,9 @@
               %a{:href => "#", class: 'button-collapse', 'data-activates' => 'mobile-demo'}
                 %i.mdi-navigation-menu
               %ul#nav-mobile.right.hide-on-med-and-down
-                = render '_top_menu'
+                = render '_main_menu'
               %ul#mobile-demo.side-nav
-                = render '_top_menu'
+                = render '_main_menu'
     %main
       = yield
 
@@ -34,26 +35,19 @@
       .container
         .row
           .col.l3.s12
-            %h5.white-text Footer Content
-            %p.grey-text.text-lighten-4 Some text goes here
-          .col.l3.s12
-            %h5.white-text We are hiring
-            %p.white-text Word jij onze nieuwe collega?
-            .waves-effect.waves-light.btn.whitesmoke
-              %i.material-icons.right
-              %h6
-                = link_to 'Check t hier', @items['/career/'].path
-          .col.l2.offset-l2.s12
-            %h5.white-text Links
+            %h5.white-text ROQUA
+            %p.grey-text.text-lighten-4 Routine Outcome Monitoring Software
+          .col.l4.s12.offset-l1
+            %h5.white-text Jobs
+            %p.white-text Wij zijn op zoek naar een nieuwe collega!
+            %a{:href => @items['/career/'].path}
+              .waves-effect.waves-light.btn.whitesmoke
+                .sky-text
+                  Iets voor jou?
+          .col.l2.offset-l1.s12
+            %h5.white-text Navigation
             %ul
-              %li
-                %a.grey-text.text-lighten-3{:href => "#!"} Link 1
-              %li
-                %a.grey-text.text-lighten-3{:href => "#!"} Link 2
-              %li
-                %a.grey-text.text-lighten-3{:href => "#!"} Link 3
-              %li
-                %a.grey-text.text-lighten-3{:href => "#!"} Link 4
+              = render '_main_menu'
       .footer-copyright
         .container
           © 2015 Gegarandeerd php vrij
