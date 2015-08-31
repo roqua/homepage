@@ -6,15 +6,28 @@ title: Contact
 .container
   .row
     %h2 Contact
-    %p
+    .col.s12.m6
+      Roqua
+      Bezoekadres:
+      %br
+      UMCG, Triade, Ingang 24, KN 1.02
+      %br
+      Hanzeplein 1
+      %br
+      9713 GZ  Groningen
+    .col.s12.m6
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.7306310386266!2d6.5740821!3d53.222677999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd585710fd79%3A0xca97676f1a1ef7d5!2sUniversity+Medical+Center+Groningen!5e0!3m2!1sen!2snl!4v1441016940321", :style => "border:0"}
+  .row
+    %h5 Contactformulier
+    %p.thin
       Gebruik onderstaand formulier om ons een vraag te stellen of iets mede te delen. Wij nemen dan zo spoedig mogelijk contact met u op.
-    %p
+    %p.thin
       Respondenten cq cliënten van GGZ instellingen die RoQua gebruiken kunnen het beste via hun eigen GGZ instelling reageren.
 
-    %p
+    %p.thin
       Medewerkers van GGZ instellingen waar RoQua gebruikt wordt kunnen beter vanuit RoQua het vragenformulier gebruiken (in RoQua icoon linksonder).
   .row
-    %form.col.s12
+    %form.col.s12.m10.offset-m1
       .row
         .input-field.col.s6
           %input#first_name.validate{:placeholder => "Placeholder", :type => "text"}
@@ -32,5 +45,7 @@ title: Contact
             .input-field.col.s12
               %textarea#textarea1.materialize-textarea
               %label{:for => "textarea1"} Bericht
-  .row
-    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9554.975548435397!2d6.574479066934211!3d53.2224403326102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd585710fd79%3A0xca97676f1a1ef7d5!2sUniversitair+Medisch+Centrum+Groningen!5e0!3m2!1snl!2snl!4v1439812112268", :style => "border:0", :width => "600"}
+  / Start of roqua Zendesk Widget script
+  :javascript
+    /*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","roqua.zendesk.com");/*]]>*/
+  / End of roqua Zendesk Widget script

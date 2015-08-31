@@ -36,7 +36,14 @@
         .row
           .col.l3.s12
             %h5.white-text ROQUA
-            %p.grey-text.text-lighten-4 Routine Outcome Monitoring Software
+            %p.grey-text.text-lighten-4
+              Bezoekadres:
+              %br
+              UMCG, Triade, Ingang 24, KN 1.02
+              %br
+              Hanzeplein 1
+              %br
+              9713 GZ  Groningen
           .col.l4.s12.offset-l1
             %h5.white-text Jobs
             %p.white-text Wij zijn op zoek naar een nieuwe collega!
@@ -45,10 +52,13 @@
                 .sky-text
                   Iets voor jou?
           .col.l2.offset-l1.s12
-            %h5.white-text Navigation
+            %h5.white-text Navigatie
             %ul
               = render '_main_menu'
+              %li
+                = link_to 'Werken bij Roqua', @items['/career/'].path
       .footer-copyright
         .container
-          © 2015 Gegarandeerd php vrij
+          .right
+            © 2015
 
