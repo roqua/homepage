@@ -85,7 +85,7 @@ body
   border-bottom: 1px solid $sunset
 
 //smaller font-size for card titles
-.card .card-title 
+.card .card-title
   font-size: 18px
 // change size of flow text
 .flow-text
@@ -134,7 +134,7 @@ body
   @media only screen and (min-width: 960px)
     font-size: 1.498rem
   @media only screen and (max-width: 360px)
-    font-size: 1.2rem 
+    font-size: 1.2rem
 
 //dropcaps
 .dropcap:first-child:first-letter,
@@ -172,7 +172,13 @@ body
 .ultra-bold
   font-weight: 900
 
+.headline
+  padding-top: 3.1rem
+
 //default
+.navbar-fixed
+  @media only screen and (max-width : 992px)
+    height: 56px
 .nav-f
   box-shadow: none
   -webkit-box-shadow: none
@@ -181,18 +187,37 @@ body
   height: 80px
   line-height: 80px
   .brand-logo
+    @media only screen and (max-width : 992px)
+      font-size: 1rem
     img
       height: 76px
       transition: height 0.4s
-  
+      @media only screen and (max-width : 992px)
+        height: 38px
+// ^ dat moet vast nog wel wat netter kunnen
+
 .nav-f.scrolled
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
   height: 64px
   line-height: 64px
+  @media only screen and (max-width : 992px)
+    height: 56px
+    line-height: 56px
   .brand-logo
+    @media only screen and (max-width : 992px)
+      font-size: 3.7rem
     img
       height: 60px
-
+      @media only screen and (max-width : 992px)
+        height: 28px
+        padding-bottom: 6px
+.nav-f,
+.nav-f.scrolled
+  @media only screen and (max-width : 992px)
+    height: 56px
+    .brand-logo
+      img
+        padding-top: 0.3rem
 nav ul a
   font-size: 1.2rem
   color: #FFF
@@ -212,3 +237,5 @@ nav ul a
         color: whitesmoke
         &:hover
           color: white
+.hidden
+  visibility: hidden
