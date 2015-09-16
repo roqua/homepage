@@ -78,6 +78,21 @@ body
 .btn.whitesmoke:hover
   background-color: white
 
+img
+  max-width: 99%
+
+#triangle-down-ocean,
+#triangle-down-dark-sky
+  margin: -20px auto 0
+  width: 0
+  height: 0
+  border-left: 25px solid transparent
+  border-right: 25px solid transparent
+#triangle-down-ocean
+  border-top: 30px solid $ocean
+#triangle-down-dark-sky
+  border-top: 50px solid $dark-sky
+
 // forms
 .input-field input[type=text]:focus
   border-bottom: 1px solid $ocean
@@ -192,9 +207,9 @@ body
     img
       height: 76px
       transition: height 0.4s
+      padding-top: 6px
       @media only screen and (max-width : 992px)
         height: 38px
-// ^ dat moet vast nog wel wat netter kunnen
 
 .nav-f.scrolled
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
