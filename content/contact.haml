@@ -9,7 +9,7 @@ title: Contact
 .section
 .container
   .row
-    .col.s12.m6
+    .col.s12.m6.flow-text
       %h5 RoQua Bezoekadres:
       %br
       UMCG, Triade, Ingang 24, KN 1.02
@@ -17,40 +17,15 @@ title: Contact
       Hanzeplein 1
       %br
       9713 GZ  Groningen
+      %p
+        %a{:href => "mailto:info@roqua.nl?"}
+          .waves-effect.waves-light.btn-large.whitesmoke info@roqua.nl
     .col.s12.m6
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.7306310386266!2d6.5740821!3d53.222677999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c9cd585710fd79%3A0xca97676f1a1ef7d5!2sUniversity+Medical+Center+Groningen!5e0!3m2!1sen!2snl!4v1441016940321", :style => "border:0"}
   .section
   .row
-    %h5 Contactformulier
-  .row
-    %form{ action: "http://formspree.io/info@roqua.nl", method: "post"}
-      .col.s12.m10.offset-m1
-        .row
-          .input-field.col.s6
-            %input#first_name.validate{placeholder: "Voornaam", type: "text", name: "voornaam"}
-              %label{:for => "first_name"} Voornaam
-          .input-field.col.s6
-            %input#last_name.validate{type: "text", name: "achternaam"}
-              %label{:for => "last_name"} Achternaam
-        .row
-          .input-field.col.s12
-            %input#email.validate{type: "email", name: "email" }
-              %label{:for => "email"} Email
-        .row
-          .input-field.col.s12
-            %textarea#textarea1.materialize-textarea{ name: "bericht"}
-            %label{:for => "textarea1"} Bericht
-        .row
-          .input-field.col.s12
-            %input{ type: "text", name:"_gotcha", style:"display:none"}
-            %input{ type: "hidden", name:"_next", value: "/contact"}
-
-        .row
-          %button.waves-effect.waves-light.btn.whitesmoke{ type: "submit"}
-            Versturen
-  .row
     %p
-      Gebruik bovensgtaand formulier om ons een vraag te stellen of iets mede te delen. Wij nemen dan zo spoedig mogelijk contact met u op.
+      Gebruik bovenstaand emailadres om ons een vraag te stellen of iets mede te delen. Wij nemen dan zo spoedig mogelijk contact met u op.
     %p
       Respondenten cq cliënten van GGZ instellingen die RoQua gebruiken kunnen het beste via hun eigen GGZ instelling reageren.
 
