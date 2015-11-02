@@ -2,11 +2,10 @@
 Title: Blog
 ---
 
-.container.flow-text
+.blog.container.flow-text
   - sorted_articles.each do |post|
     .post
-      %h1= link_to post[:title], post.path
-      %aside
+      %aside.blog
         Posted at:
         = get_pretty_date(post)
       = get_post_start(post)
