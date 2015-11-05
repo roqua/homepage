@@ -3,7 +3,8 @@ title: Installing RubyMotion on Circle CI
 created_at: 2015-11-02 09:00:00 +0200
 kind: article
 ---
-.blog
+.blog.flow-text
+  %img{:src => @items['/images/blog/rubymotion_on_circleci/'].path}
   %h1 Installing RubyMotion on Circle CI
   %h2 &hellip;or how to install RubyMotion from command line.
 
@@ -44,8 +45,8 @@ kind: article
     runs the build, it copies provisioning profile into the ~/Library/MobileDevice/Provisioning Profiles folder. I use
     environment variable which sets the path to provisioning profile during the build.
 
-  %p
-    %em
+  %em
+    %p.no-cap
       Note that XCode 7.1, which is not yet available on Circle CI, will not require development or testing machine to be
       provisioned to start develop and test iOS apps.
 
