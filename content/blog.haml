@@ -1,0 +1,11 @@
+---
+Title: Blog
+---
+
+- sorted_articles.each do |post|
+  .post
+    %aside.blog.flow-text
+      / = link_to post[:title], post.path
+      Posted at:
+      = get_pretty_date(post)
+    = get_post_start(post)

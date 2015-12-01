@@ -5,6 +5,7 @@ gem 'adsf'
 gem 'sass'
 gem 'haml'
 gem 'coffee-script'
+gem 'nanoc-toolbox'
 
 group :development do
   gem 'guard-bundler'
