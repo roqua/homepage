@@ -18,13 +18,19 @@ tags:
     = link_to 'RoQua', @items['/'].path
     questionnaires (in Dutch). Our web-based software is mostly written in Ruby. None of our developers had experience
     building native iOS apps and neither had we experience with Objective-C or Swift. So we decided to go with
-    RubyMotion for two reasons: we'd keep it all Ruby (including most of the Ruby sauce) and we'd build a native app
-    (which is great for performance). Off course there are also downsides, but that’s a subject for another post.
+    = link_to 'RubyMotion', 'http://www.rubymotion.com/'
+    for two reasons: we'd keep it all Ruby (including most of the Ruby sauce) and we'd build a native app
+    (which is great for performance). Off course there are some downsides with this approach but that’s a subject for
+    another post.
 
   %p
-    All of our projects are tested on Circle CI before we proceed with merging pull requests and deployment to our
+    All of our projects are tested on
+    = link_to 'Circle CI', 'https://circleci.com/'
+    before we proceed with merging pull requests and deployment to our
     servers. Which is what I would like to achieve with this iOS app: testing and building on a remote Continuous
-    Integration system. Luckily for me Circle CI supports iOS. Unfortunately, they still do not support RubyMotion out of
+    Integration system. Luckily for me Circle CI
+    = "#{link_to('supports iOS', 'http://blog.circleci.com/announcing-ios-and-android-support/')}."
+    Unfortunately, they still do not support RubyMotion out of
     the box, so I spent quite some time and a long email exchange with Circle support (which is great!) to figure it all
     out.
 
@@ -47,19 +53,18 @@ tags:
 
   %p
     Provisioning is quite simple. I included iOS provisioning profile within git repository of the project. When Circle
-    runs the build, it copies provisioning profile into the ~/Library/MobileDevice/Provisioning Profiles folder. I use
-    an environment variable which sets the path to provisioning profile during the build.
+    runs the build, it copies provisioning profile into the
+    %code ~/Library/MobileDevice/Provisioning Profiles
+    folder. I use an environment variable which sets the path to provisioning profile during the build.
 
   %em
-    Note that XCode 7.1, which is not yet available on Circle CI, will not require your development or testing machine to be
-    provisioned in order to start to develop and test iOS apps.
+    Note that XCode 7.1, which at the time of writing is not yet available on Circle CI, will not require your
+    development or testing machine to be provisioned in order to start to develop and test iOS apps.
 
   %h3 Circle.yml
   %p
-    Setting up the project appeared to be quite simple too. I have some Rubygems and Cocoapods dependencies which must be
-    installed in order for this app to work properly; there are some directories that you might want to cache; TODO.?????
-    See circle.yml for details:
-
+    Setting up the project appeared to be quite simple too. There are some Rubygems and Cocoapods dependencies which
+    must be installed in order for this app to work properly. See circle.yml for details:
   = gist('f8fd6ab63eec99f4abb2') # https://gist.github.com/ivdma/f8fd6ab63eec99f4abb2
 
   %h3 Next Steps
@@ -67,4 +72,4 @@ tags:
     Right now Circle only tests the software and sends a callback to some other services we use. For example, pull
     requests on Github know the state of the build and our chat application receives an error when a build succeeds or
     fails. I would like to take it even further and be able to build a release version of this app
-    in order to deploy it to production devices. But perhaps that will be a subject for a next post.
+    in order to deploy it to production devices. But perhaps that will be a subject of my next post.
