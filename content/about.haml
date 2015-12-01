@@ -178,6 +178,21 @@ title: About
       .col.s6.m4.l3
         .card.hoverable
           .card-image.waves-effect.waves-block.waves-light
+            %img{:src => @items['/images/tim/'].path, class: "activator"}
+          .card-content
+            %span.card-title.activator.grey-text.text-darken-4
+              Tim
+              %i.mdi-navigation-more-vert.right
+          .card-reveal
+            %span.card-title.grey-text.text-darken-4
+              Tim Raasveld, BICT
+              %i.mdi-navigation-close.right
+            %p Developer
+            %p Computer scientist
+            %p tim@roqua.nl
+      .col.s6.m4.l3.offset-l1
+        .card.hoverable
+          .card-image.waves-effect.waves-block.waves-light
             %img{:src => @items['/images/jij/'].path, class: "activator"}
           .card-content
             %span.card-title.activator.grey-text.text-darken-4
