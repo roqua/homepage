@@ -9,3 +9,4 @@ crash.log
 /.bundle/
 /.idea/
 /.sass-cache/
+.env

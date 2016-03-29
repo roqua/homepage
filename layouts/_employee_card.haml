@@ -1,0 +1,19 @@
+.card.hoverable
+  .card-image.waves-effect.waves-block.waves-light
+    %img{:src => @items["/images/#{@photo}/"].path, class: "activator"}
+  .card-content
+    %span.card-title.activator.grey-text.text-darken-4
+      = @first_name
+      %i.mdi-navigation-more-vert.right
+  .card-reveal
+    %span.card-title.grey-text.text-darken-4
+      = @name_and_title
+      %i.mdi-navigation-close.right
+    %p
+      = @job
+    %p
+      = @job2
+    %p
+      = @extra_info
+    %p
+      = @email

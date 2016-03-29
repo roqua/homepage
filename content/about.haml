@@ -11,199 +11,33 @@ title: About
     %h2.header.text_b wij:
     .row
       .col.s6.m4.l3.offset-l1
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/erwin/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Erwin
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Erwin Veermans, MSc
-              %i.mdi-navigation-close.right
-            %p Technisch projectleider
-            %p ICT-er / Natuurkundige
-            %p Mede-oprichter
-            %p erwin@roqua.nl
+        = render '_employee_card', photo: 'erwin', first_name: 'Erwin',name_and_title: 'Erwin Veermans, MSc', job: 'Technisch projectleider', job2: 'ICT-er / Natuurkundige', extra_info: 'Mede-oprichter', email: 'erwin@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/sjoerd/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Sjoerd
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Sjoerd Sytema, PhD
-              %i.mdi-navigation-close.right
-            %p Inhoudelijk projectleider
-            %p Socioloog
-            %p Mede-oprichter
-            %p sjoerd@roqua.nl
+        = render '_employee_card', photo: 'sjoerd', first_name: 'Sjoerd', name_and_title: 'Sjoerd Sytema, PhD', job: 'Inhoudelijk projectleider', job2: 'Socioloog', extra_info: 'Mede-oprichter', email: 'sjoerd@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/jorn/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Jorn
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Jorn van de Beek, BSc
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Computer Scientist
+        = render '_employee_card', photo: 'jorn', first_name: 'Jorn', name_and_title: 'Jorn van de Beek, BSc', job: 'Developer', job2: 'Computer Scientist'
       .col.s6.m4.l3.offset-l1
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/herman/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Herman
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Herman Hegeman, BAS
-              %i.mdi-navigation-close.right
-            %p Systeembeheerder
-            %p herman@roqua.nl
+        = render '_employee_card', photo: 'herman', first_name: 'Herman', name_and_title: 'Hermen Hegeman, BAS', job: 'Systeembeheerder', email: 'herman@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/marten/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Marten
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Marten Veldthuis, MSc
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Computer Scientist
-            %p marten@roqua.nl
+        = render '_employee_card', photo: 'marten', first_name: 'Marten', name_and_title:'Marten Veldthuis, MSc', job: 'Developer', job2:'Computer Scientist', email: 'marten@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image
-            %img{:src => @items['/images/henk/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Henk
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Henk van der Veen, BSc
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Computer Scientist
-            %p henk@roqua.nl
+        = render '_employee_card', photo: 'henk', first_name: 'Henk', name_and_title: 'Henk van der Veen, BSc', job: 'Developer', job2: 'Computer Scientist', email: 'henk@roqua.nl'
       .col.s6.m4.l3.offset-l1
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/ivan/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Ivan
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Ivan Malykh, BICT.
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Computer Scientist
-            %p ivan@roqua.nl
+        = render '_employee_card', photo: 'ivan', first_name: 'Ivan', name_and_title: 'Ivan Malykh', job: 'Developer', job2: 'Computer Scientist', email: 'ivan@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/rivka/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Rivka
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Rivka de Vries, dr
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Statisticus
-            %p rivka@roqua.nl
+        = render '_employee_card', photo: 'rivka', first_name: 'Rivka', name_and_title: 'Rivka de Vries, dr.', job: 'Developer', job2: 'Statisticus', email: 'rivka@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/ellen/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Ellen
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Ellen Visser, PhD
-              %i.mdi-navigation-close.right
-            %p Data-analist
-            %p Trainer
-            %p ellen@roqua.nl
+        = render '_employee_card', photo: 'ellen', first_name: 'Ellen', name_and_title: 'Ellen Visser, PhD', job: 'Data-analist', job2: 'Trainer', email: 'ellen@roqua.nl'
       .col.s6.m4.l3.offset-l1
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/inge/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Inge
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Inge ten Vaarwerk, MSc.
-              %i.mdi-navigation-close.right
-            %p Ontwerp en advies vragenlijsten
-            %p inge@roqua.nl
+        = render '_employee_card', photo: 'inge', first_name: 'Inge', name_and_title: 'Inge ten Vaarwerk, MSc', job: 'Ontwerp en advies vragenlijsten', email: 'inge@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/hester/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Hester
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Hester van Wijk, BFA
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Designer
-            %p hester@roqua.nl
+        = render '_employee_card', photo: 'hester', first_name: 'Hester', name_and_title: 'Hester van Wijk, BFA', job: 'Designer', job2: 'Developer', email: 'hester@roqua.nl'
       .col.s6.m4.l3
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/tim/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Tim
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Tim Raasveld, BICT
-              %i.mdi-navigation-close.right
-            %p Developer
-            %p Computer scientist
-            %p tim@roqua.nl
+        = render '_employee_card', photo: 'tim', first_name: 'Tim', name_and_title: 'Tim Raasveld, BICT', job: 'Developer', job2: 'Computer Scientist', email: 'tim@roqua.nl'
       .col.s6.m4.l3.offset-l1
-        .card.hoverable
-          .card-image.waves-effect.waves-block.waves-light
-            %img{:src => @items['/images/jij/'].path, class: "activator"}
-          .card-content
-            %span.card-title.activator.grey-text.text-darken-4
-              Jij?
-              %i.mdi-navigation-more-vert.right
-          .card-reveal
-            %span.card-title.grey-text.text-darken-4
-              Developer
-              %i.mdi-navigation-close.right
-            %p
-              Wij zijn nog op zoek naar een developer, we nodigen je graag een keertje uit op de
-              %a{:href => @items['/career/'].path} thee of koffie!
+        = render '_employee_card', photo: 'arnold', first_name: 'Arnold', name_and_title: 'Arnold van der Meulen', job: 'Developer', job2: 'Computer Scientist', email: 'arnold@roqua.nl'
+      .col.s6.m4.l3
+        = render '_employee_card', photo: 'jij', first_name: 'Jij?', name_and_title: 'Developer', job: "Wij zijn nog op zoek naar een developer, we nodigen je graag een keertje uit op de #{link_to 'thee of koffie', @items['/career/'].path} !"
 
   .container
     .row
@@ -217,21 +51,26 @@ title: About
       .section
         .row
           .col.s12.m5
-            %h2 Academisch
-            %p.flow-text RoQua is een academisch project en onderzoek en innovatie spelen daarom een belangrijke rol zoals het samen met statistici ontwikkelen van nieuwe meetmethoden.
-            %p.flow-text RoQua participeert inmiddels in een reeks innovatieve onderzoeksprojecten, waarin het routinematig herhaald meten en het klinisch toepassen van de feedback uit de data centraal staan.
-          .col.s12.m5.right
             .card-panel.whitesmoke
               %h5 Achtergrond
               %p RoQua komt voort uit het Rob Giel Onderzoekscentrum (RGOc), een samenwerkingsverband tussen de noordelijke GGZ instellingen en het Universitair Centrum Psychiatrie (UCP) van het UMCG.  Daar ontstond het idee om zelf een ROM applicatie te gaan ontwikkelen. Sindsdien hebben ook andere GGZ instellingen zich hierbij aangesloten, waardoor RoQua nu een van de grootse ROM initiatieven in Nederland is.
               %p De participerende instellingen betalen jaarlijks een vast bedrag. Dit is het budget waarmee het RoQua team van het UCP wordt gefinancierd. Dit team zorgt voor een permanente verdere ontwikkeling van de applicatie. De Stuurgroep RoQua (waarin alle participanten zijn vertegenwoordigd) zorgt voor aansturing en controle.
+          .col.s12.m5.right
+            %h2 Academisch
+            %p.flow-text RoQua is een academisch project en onderzoek en innovatie spelen daarom een belangrijke rol zoals het samen met statistici ontwikkelen van nieuwe meetmethoden.
+            %p.flow-text RoQua participeert inmiddels in een reeks innovatieve onderzoeksprojecten, waarin het routinematig herhaald meten en het klinisch toepassen van de feedback uit de data centraal staan.
 
   #page-section-non-profit
   .divider
   .container
     .section
       .row
-        %h2.center.header.text_h2
-          Non-profit
-        %p.flow-text RoQua is een non-profit organisatie en daarom kunnen wij kwaliteit, gebruiksvriendelijkheid, innovatie en onderzoek een centrale plaats geven in ons werk.
-
+        .col.s12.m5
+          %h2
+            Non-profit
+          %p.flow-text RoQua is een non-profit organisatie en daarom kunnen wij kwaliteit, gebruiksvriendelijkheid, innovatie en onderzoek een centrale plaats geven in ons werk.
+        .col.s12.m5.right
+          .card-panel.whitesmoke
+            %h5 Informatie voor onderzoekers
+            %p.flow-text RoQua is in het UMCG formeel erkend als instrument dat onderzoekers mogen gebruiken om hun onderzoek uit te voeren.
+            .flow-text= link_to 'Meer >>>', @items['/research/'].path
