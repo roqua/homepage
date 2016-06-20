@@ -5,32 +5,33 @@ kind: article
 ---
 
 .blog.flow-text
-  %h1 My experience working at RoQua
+  %h1 Working at RoQua
+  %p As I am preparing to leave for my journey to Nepal by bike, I would like to share with you what it has been like the past year working at RoQua.
   %p
     One of the biggest changes for me compared to my previous work experiences was the degree of professionality that is required.
     I don't mean the kind of professionality where you wear a suit to work every day,
     but how important it is to stick to procedures and ensuring your code is provably secure.
-  %p
+  %p.no-cap
     This is because RoQua stores patient data, which is sometimes considered the king of all types of data you don't want to leak.
-  %p
-    Some of the things I learned to at RoQua:
-    %ul
-      %li
-        Code reviews. I think this contributes a lot to consistency in how we work as a team,
-        because it encourages discussion based on actual shippable work rather than abstract ideas.
-      %li
+    %p.no-cap
+      Some of the things I learned to at RoQua:
+      %blockquote
         The pros and cons of various testing strategies. Although I did some unit testing in RSpec before,
         but in many real-world situations it's challenging to get unit tests to cover your whole application.
-      %li
-        How to effectively provide support as a team
-  %p
+      %blockquote
+        How to effectively provide support as a team.
+      %blockquote
+        Code reviews. I think this contributes a lot to consistency in how we work as a team,
+        because it encourages discussion based on actual shippable work rather than abstract ideas.
+
+  %p.no-cap
     Some of the perks:
-    %ul
-      %li A culture of properly testing and finishing your code rather than rushing to deliver
-      %li
-        Standing desk. For me, this one was a big deal I would often feel very tired at the end of 8 hours of non-stop sitting.
-        It's a lot better when you can vary with standing throughout the day
-      %li
-        a
-        %em lot
-        of cake (not sure whether this is a pro or con, looking at my belly)
+    %blockquote A culture of properly testing and finishing your code rather than rushing to deliver.
+    %blockquote
+      Standing desk. For me, this one was a big deal I would often feel very tired at the end of 8 hours of non-stop sitting.
+      It's a lot better when you can vary with standing throughout the day
+    %blockquote
+      a
+      %em lot
+      of cake (not sure whether this is a pro or con, looking at my belly)
+    %img{:src => @items['/images/blog/cake/'].path}
