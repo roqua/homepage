@@ -1,0 +1,12 @@
+machine:
+  timezone:
+    Europe/Amsterdam
+  ruby:
+    version: ruby-2.3.1
+
+test:
+  override:
+    - 'bundle exec nanoc compile'
+  post:
+    - 'zip -r frontpage.zip output'
+    - 'mv frontpage.zip $CIRCLE_ARTIFACTS'
