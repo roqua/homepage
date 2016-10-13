@@ -54,3 +54,7 @@ Marketing website for RoQua
    ```
 
 3. Upload contents of `~/Downloads/output` to your hosting provider.
+
+If you have no credentials yet, ask Herman or Erwin to add your public key and(!) IP-address to Antagonist.
+
+You can then SSH or SFTP to `roqua@roqua.nl`.
