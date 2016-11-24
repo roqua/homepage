@@ -35,6 +35,8 @@ title: About
       .col.s6.m4.l3
         = render '_employee_card', photo: 'arnold', first_name: 'Arnold', name_and_title: 'Arnold van der Meulen', job: 'Developer', job2: 'Computer Scientist', email: 'arnold@roqua.nl'
       .col.s6.m4.l3.offset-l1
+        = render '_employee_card', photo: 'daan', first_name: 'Daan', name_and_title: 'Daan Davidsz, BSc', job: 'Devloper', job2: 'Computer Scientist'
+      .col.s6.m4.l3
         = render '_employee_card', photo: 'jij', first_name: 'Jij?', name_and_title: 'Developer', job: "Wij zijn nog op zoek naar een developer, we nodigen je graag een keertje uit op de #{link_to 'thee of koffie', @items['/career/'].path} !"
 
   .container
