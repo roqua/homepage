@@ -11,6 +11,7 @@ GEM
     colored (1.2)
     cri (2.7.0)
       colored (~> 1.2)
+    dotenv (2.1.1)
     execjs (2.5.2)
     ffi (1.9.10)
     formatador (0.2.5)
@@ -36,6 +37,8 @@ GEM
       spoon (~> 0.0.1)
     haml (4.0.7)
       tilt
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     jsmin (1.0.1)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
@@ -43,6 +46,7 @@ GEM
     lumberjack (1.0.9)
     method_source (0.8.2)
     mini_portile (0.6.2)
+    multi_xml (0.6.0)
     nanoc (3.8.0)
       cri (~> 2.3)
     nanoc-toolbox (0.2.1)
@@ -60,6 +64,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.6.4)
+    rake (11.3.0)
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -77,13 +82,16 @@ PLATFORMS
 DEPENDENCIES
   adsf
   coffee-script
+  dotenv
   guard-bundler
   guard-nanoc
   guard-process
   haml
+  httparty
   nanoc
   nanoc-toolbox
+  rake
   sass
 
 BUNDLED WITH
-   1.13.1
+   1.13.6
