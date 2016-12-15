@@ -45,15 +45,15 @@ Marketing website for RoQua
 
 ## Deployment
 
-1. Download the [latest  build](https://circleci.com/api/v1/project/roqua/roqua_frontpage/master/artifacts/0/$CIRCLE_ARTIFACTS/frontpage.zip?branch=master).
-
-2. Unzip the build
+1. Download the latest build. Run command:
 
    ```bash
-   unzip ~/Downloads/frontpage.zip
+   rake roqua:download_build
    ```
 
-3. Upload contents of `~/Downloads/output` to your hosting provider.
+   This will download and unzip the latest master build from Cirlce CI to `./builds/output`
+
+2. Upload contents of `./build/output` to your hosting provider.
 
 If you have no credentials yet, ask Herman or Erwin to add your public key and(!) IP-address to Antagonist.
 

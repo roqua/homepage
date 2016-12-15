@@ -22,11 +22,13 @@ end
 namespace :roqua do
   desc 'Downloads build from Circle CI'
   task download_build: :dotenv do
+    `rm -rf ./builds/output ./builds/master.zip`
     api_url = "https://circleci.com/api/v1.1/project/github/roqua/roqua_frontpage/latest/artifacts?circle-token=#{ENV['CIRCLECI_API_TOKEN']}&branch=master"
     response = HTTParty.get api_url
     artifacts = JSON.parse(response.body)
     if artifacts.any?
-      puts `curl -v #{artifacts[0]['url']} > builds/master.zip`
+      `curl -v #{artifacts[0]['url']} > ./builds/master.zip`
+      `unzip ./builds/master.zip -d ./builds`
     end
   end
 end
