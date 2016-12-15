@@ -6,6 +6,7 @@ bin
 crash.log
 /vendor/gems/
 /bin/
+/builds/*.zip
 /.bundle/
 /.idea/
 /.sass-cache/
