@@ -11,3 +11,4 @@ crash.log
 /.idea/
 /.sass-cache/
 .env
+.ruby-version
