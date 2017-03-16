@@ -18,7 +18,7 @@ Marketing website for RoQua
    git checkout -b new-job-opening
    ```
 
-3. Work on your branch. Make sure it's buids properly. Tip: You can use guard to do compiling for you.
+3. Work on your branch. Make sure it builds properly. Tip: You can use guard to do compiling for you.
 
    ```bash
    bundle exec guard
@@ -53,7 +53,7 @@ Marketing website for RoQua
 
    This will download and unzip the latest master build from Cirlce CI to `./builds/output`
 
-2. Upload contents of `./build/output` to your hosting provider.
+2. Upload contents of `./builds/output` to your hosting provider.
 
 If you have no credentials yet, ask Herman or Erwin to add your public key and(!) IP-address to Antagonist.
 
