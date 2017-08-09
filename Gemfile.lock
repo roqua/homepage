@@ -40,6 +40,7 @@ GEM
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     jsmin (1.0.1)
+    libv8 (3.16.14.17-x86_64-darwin-16)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -68,11 +69,15 @@ GEM
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    ref (2.0.0)
     sass (3.4.16)
     shellany (0.0.1)
     slop (3.6.0)
     spoon (0.0.4)
       ffi
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (0.19.1)
     tilt (2.0.1)
 
@@ -92,6 +97,7 @@ DEPENDENCIES
   nanoc-toolbox
   rake
   sass
+  therubyracer
 
 BUNDLED WITH
-   1.13.6
+   1.15.0

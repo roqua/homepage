@@ -6,6 +6,7 @@ gem 'sass'
 gem 'haml'
 gem 'coffee-script'
 gem 'nanoc-toolbox'
+gem 'therubyracer'
 
 group :development do
   gem 'rake'

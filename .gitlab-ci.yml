@@ -1,0 +1,19 @@
+image: "roqua/roqua-build-images:ruby-2.3.3"
+
+cache:
+  paths:
+    - vendor/ruby
+
+before_script:
+  - ruby -v
+
+pages:
+  script:
+  - git pull origin master
+  - gem install bundler
+  - bundle install --path vendor
+  - bundle exec nanoc compile
+  - mv output public
+  artifacts:
+    paths:
+    - public
