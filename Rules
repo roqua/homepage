@@ -16,8 +16,10 @@
 compile '*' do
   if item[:extension] == 'sass'
     filter :sass
+    filter :relativize_paths, :type => :css
   elsif  item[:extension] == 'scss'
     filter :sass, syntax: :scss
+    filter :relativize_paths, :type => :css
   elsif item[:extension] == 'coffee'
     filter :coffeescript
   elsif item.binary?
@@ -25,6 +27,7 @@ compile '*' do
   else
     filter :haml
     layout 'default'
+    filter :relativize_paths, :type => :html
   end
 end
 
