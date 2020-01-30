@@ -1,4 +1,4 @@
-image: "roqua/roqua-build-images:ruby-2.3.3"
+image: "registry.roqua.nl/roqua/docker-base-images:ruby-2.6-builder"
 
 cache:
   paths:
@@ -7,13 +7,25 @@ cache:
 before_script:
   - ruby -v
 
-pages:
+test:
+  stage: test
   script:
-  - git pull origin master
-  - gem install bundler
-  - bundle install --path vendor
-  - bundle exec nanoc compile
-  - mv output public
+    - bundle install --path vendor
+    - bundle exec nanoc compile
   artifacts:
     paths:
-    - public
+      - output
+  except:
+    - master
+
+pages:
+  stage: deploy
+  script:
+    - bundle install --path vendor
+    - bundle exec nanoc compile
+    - mv output public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
