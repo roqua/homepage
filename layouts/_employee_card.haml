@@ -1,6 +1,6 @@
 .card.hoverable
   .card-image.waves-effect.waves-block.waves-light
-    %img{:src => @items["/images/#{@photo}/"].path, class: "activator"}
+    %img{:src => @items["/images/#{@photo}.*"].path, class: "activator"}
   .card-content
     %span.card-title.activator.grey-text.text-darken-4
       = @first_name
