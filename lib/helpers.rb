@@ -3,8 +3,6 @@ include Nanoc::Helpers::Tagging
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::LinkTo
 
-include Nanoc::Toolbox::Helpers::GithubGist
-
 module ArticleHelper
 
   def get_pretty_date(post)

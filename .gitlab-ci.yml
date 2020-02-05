@@ -12,6 +12,7 @@ test:
   script:
     - bundle install --path vendor
     - bundle exec nanoc compile
+    - bundle exec nanoc check ilinks
   artifacts:
     paths:
       - output

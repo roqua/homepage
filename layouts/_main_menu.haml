@@ -1,18 +1,18 @@
 %li
   .waves-effect.waves-block.waves-light
-    = link_to 'Home', @items['/'].path
+    = link_to 'Home', @items['/index.*'].path
 %li
   .waves-effect.waves-block.waves-light
-    = link_to 'ROM', @items['/rom/'].path
+    = link_to 'ROM', @items['/rom.*'].path
 %li
   .waves-effect.waves-block.waves-light
-    = link_to 'Over ons', @items['/about/'].path
+    = link_to 'Over ons', @items['/about.*'].path
+-#%li
+-#  .waves-effect.waves-block.waves-light
+-#    = link_to 'Blog', @items['/blog.*'].path
 %li
   .waves-effect.waves-block.waves-light
-    = link_to 'Blog', @items['/blog/'].path
-%li
-  .waves-effect.waves-block.waves-light
-    = link_to 'Contact', @items['/contact/'].path
+    = link_to 'Contact', @items['/contact.*'].path
 %li
   .waves-effect.waves-block.waves-light
     = link_to 'Privacy statement', 'https://www.umcg.nl/NL/UMCG/Paginas/Privacy-statement-UMCG.aspx'

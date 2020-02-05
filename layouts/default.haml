@@ -6,23 +6,19 @@
     %meta{"http-equiv" => "X-UA-Compatible", "content" => "IE=edge"}
     %meta{"name" => "viewport", "content" => "width=device-width, initial-scale=1.0"}
     /Compiled and minified CSS
-    %link{:href => @items['/images/apple-icon-114x114/'].path, :rel => "apple-touch-icon"}
-    %link{:href => @items['/images/apple-icon-120x120/'].path, :rel => "apple-touch-icon"}
-    %link{:href => @items['/images/apple-icon-152x152/'].path, :rel => "apple-touch-icon"}
-    %link{:href => @items['/images/apple-icon-180x180/'].path, :rel => "apple-touch-icon"}
-    %link{:href => @items['/images/android-icon-192x192/'].path, :rel => "icon" , :type => "image/png", :sizes =>"192x192"}
-    %link{:href => @items['/images/favicon-32x32/'].path, :rel => "icon", :type => "image/png", :size =>"32x32"}
-    %link{:href => @items['/images/favicon-96x96/'].path, :rel => "icon", :type => "image/png", :size =>"96x96"}
-    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css", :rel => "stylesheet"}
-    %link{:href => @items['/stylesheets/application/'].path, :rel => "stylesheet"}
-    /[if IE 9]
-      %link{ :href => @items['/stylesheets/ie9/'].path, :rel => "stylesheet"}
-    /[if IE 8]
-      %link{ :href => @items['/stylesheets/ie8/'].path, :rel => "stylesheet"}
-    %script{:src =>"https://code.jquery.com/jquery-2.1.1.min.js"}
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"}
-    %script{:src => @items['/javascripts/application/'].path}
-    %link{:href => "https://fonts.googleapis.com/icon?family=Raleway:400|Material+Icons", rel:"stylesheet", type:"text/css"}
+    %link{:href => @items['/images/apple-icon-114x114.*'].path, :rel => "apple-touch-icon"}
+    %link{:href => @items['/images/apple-icon-120x120.*'].path, :rel => "apple-touch-icon"}
+    %link{:href => @items['/images/apple-icon-152x152.*'].path, :rel => "apple-touch-icon"}
+    %link{:href => @items['/images/apple-icon-180x180.*'].path, :rel => "apple-touch-icon"}
+    %link{:href => @items['/images/android-icon-192x192.*'].path, :rel => "icon" , :type => "image/png", :sizes =>"192x192"}
+    %link{:href => @items['/images/favicon-32x32.*'].path, :rel => "icon", :type => "image/png", :size =>"32x32"}
+    %link{:href => @items['/images/favicon-96x96.*'].path, :rel => "icon", :type => "image/png", :size =>"96x96"}
+    %link{:href => '/vendor/style/materialize.css', :rel => "stylesheet"}
+    %link{:href => @items['/stylesheets/application.*'].path, :rel => "stylesheet"}
+    %script{:src => '/vendor/js/jquery.js' }
+    %script{:src => '/vendor/js/materialize.js' }
+    %script{:src => @items['/javascripts/application.*'].path}
+    %link{:href => '/vendor/style/fonts.css', rel:"stylesheet", type:"text/css"}
     %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
   %body
     %header
@@ -31,14 +27,14 @@
           .container
             .nav-wrapper
               .brand-logo
-                %a{:href => @items['/'].path}
-                  %img{:src => @items['/images/roqua_logo_t_w/'].path}
+                %a{:href => @items['/index.*'].path}
+                  %img{:src => @items['/images/roqua_logo_t_w.*'].path}
               %a{:href => "#", class: 'button-collapse', 'data-activates' => 'mobile-demo'}
                 %i.mdi-navigation-menu
               %ul#nav-mobile.right.hide-on-med-and-down
-                = render '_main_menu'
+                = render '/_main_menu.*'
               %ul#mobile-demo.side-nav
-                = render '_main_menu'
+                = render '/_main_menu.*'
     %main
       = yield
 
@@ -60,15 +56,15 @@
           .col.l4.s11.offset-l1.offset-s1
             %h5.white-text Jobs
             %p.white-text Wij zijn op zoek naar een nieuwe collega!
-            %a{:href => @items['/career/'].path}
+            %a{:href => @items['/career.*'].path}
               .waves-effect.waves-light.btn.whitesmoke
                 .sky-text
                   Iets voor jou?
           .col.l2.s11.offset-l1.offset-s1
             %h5.white-text Navigatie
             %ul
-              = render '_main_menu'
+              = render '/_main_menu.*'
               %li
-                = link_to 'Werken bij RoQua', @items['/career/'].path
+                = link_to 'Werken bij RoQua', @items['/career.*'].path
       .footer-copyright
         .container
