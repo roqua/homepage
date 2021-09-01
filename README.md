@@ -4,7 +4,7 @@ Marketing website for RoQua
 
 ## Development
 
-1. Checkout the latest master and make sure you have the gems installed and website builds properly.
+1. Checkout the latest master and make sure you have the gems installed and website builds properly (You might run `brew install node` if nanoc complains about missing JavaScript Runtime).
 
    ```bash
    git pull origin master
