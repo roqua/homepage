@@ -45,16 +45,4 @@ Marketing website for RoQua
 
 ## Deployment
 
-1. Download the latest build. Run command:
-
-   ```bash
-   rake roqua:download_build
-   ```
-
-   This will download and unzip the latest master build from Cirlce CI to `./builds/output`
-
-2. Upload contents of `./builds/output` to your hosting provider.
-
-If you have no credentials yet, ask Herman or Erwin to add your public key and(!) IP-address to Antagonist.
-
-You can then SSH or SFTP to `roqua@roqua.nl`.
+Gitlab CI automatically deploys from the primary branch
