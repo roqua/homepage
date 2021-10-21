@@ -24,7 +24,7 @@ Marketing website for RoQua
    bundle exec guard
    ```
 
-4. Ensure it looks sexy
+4. Ensure it looks good
 
    ```bash
    bundle exec nanoc view
