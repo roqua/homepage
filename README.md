@@ -45,4 +45,4 @@ Marketing website for RoQua
 
 ## Deployment
 
-Gitlab CI automatically deploys from the primary branch
+Gitlab CI automatically deploys from the primary branch.
