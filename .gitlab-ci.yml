@@ -31,8 +31,7 @@ deploy:
     - bundle install --path vendor
     - bundle exec nanoc compile
     - mv output public
-    - rsync -av -e "ssh -o StrictHostKeyChecking=no" --delete ./public/ $SSH_USER@$SERVER_IP:~/public_html
-    - rsync -av -e "ssh -o StrictHostKeyChecking=no" --delete ./public/ deploy@168.119.126.75:~/roqua_frontpage/html
+    - rsync -av -e "ssh -o StrictHostKeyChecking=no" --delete ./public/ $SSH_USER@$SERVER_IP:~/roqua_frontpage/html
   artifacts:
     paths:
       - public
