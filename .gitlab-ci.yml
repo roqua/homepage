@@ -1,4 +1,4 @@
-image: "registry.roqua.nl/roqua/docker-base-images:ruby-2.6-builder"
+image: "registry.roqua.nl/roqua/docker-base-images:ruby-2.7-builder"
 
 cache:
   paths:
