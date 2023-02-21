@@ -1,6 +1,25 @@
 ---
 title: About
 ---
+
+:ruby
+  PEOPLE = [
+    {photo: 'erwin', first_name: 'Erwin',name_and_title: 'Erwin Veermans, MSc', job: 'Technisch projectleider', job2: 'ICT-er / Natuurkundige', extra_info: 'Mede-oprichter', email: 'erwin@roqua.nl'},
+    {photo: 'jorn', first_name: 'Jorn', name_and_title: 'Jorn van de Beek, BSc', job: 'Developer', job2: 'Computer Scientist'},
+    {photo: 'herman', first_name: 'Herman', name_and_title: 'Herman Hegeman, BAS', job: 'Systeembeheerder', email: 'herman@roqua.nl'},
+    {photo: 'marten', first_name: 'Marten', name_and_title:'Marten Veldthuis, MSc', job: 'Developer', job2:'Computer Scientist', email: 'marten@roqua.nl'},
+    {photo: 'henk', first_name: 'Henk', name_and_title: 'Henk van der Veen, BSc', job: 'Developer', job2: 'Computer Scientist', email: 'henk@roqua.nl'},
+    {photo: 'ellen', first_name: 'Ellen', name_and_title: 'Ellen Visser, PhD', job: 'Data-analist', job2: 'Trainer', email: 'ellen@roqua.nl'},
+    {photo: 'inge', first_name: 'Inge', name_and_title: 'Inge ten Vaarwerk, MSc', job: 'Ontwerp en advies vragenlijsten', email: 'inge@roqua.nl'},
+    {photo: 'rei', first_name: 'Rei', name_and_title: 'Rei Monden, PhD', job: 'R Developer', job2: 'Statisticus', email: 'rei@roqua.nl'},
+    {photo: 'jij', first_name: 'Jij?', name_and_title: 'Developer', job: "Wij zijn altijd geïnteresseerd in talent, we nodigen je graag een keertje uit op de #{link_to 'thee of koffie', @items['/career.*'].path} !"}
+  ]
+
+  ALUMNI = [
+    {photo: 'sjoerd', first_name: 'Sjoerd', name_and_title: 'Sjoerd Sytema, PhD', job: 'Inhoudelijk projectleider', job2: 'Socioloog', extra_info: 'Mede-oprichter'},
+    {photo: 'arnold', first_name: 'Arnold', name_and_title: 'Arnold van der Meulen', job: 'Developer', job2: 'Computer Scientist'},
+  ]
+
 #about-banner.section.no-pad-bot
   .container
     %h1.text_h.center.header.headline
@@ -10,33 +29,22 @@ title: About
   .container
     %h2.header.text_b wij:
     .row
-      .col.s6.m4.l3.offset-l1
-        = render '/_employee_card.*', photo: 'erwin', first_name: 'Erwin',name_and_title: 'Erwin Veermans, MSc', job: 'Technisch projectleider', job2: 'ICT-er / Natuurkundige', extra_info: 'Mede-oprichter', email: 'erwin@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'sjoerd', first_name: 'Sjoerd', name_and_title: 'Sjoerd Sytema, PhD', job: 'Inhoudelijk projectleider', job2: 'Socioloog', extra_info: 'Mede-oprichter', email: 'sjoerd@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'jorn', first_name: 'Jorn', name_and_title: 'Jorn van de Beek, BSc', job: 'Developer', job2: 'Computer Scientist'
-      .col.s6.m4.l3.offset-l1
-        = render '/_employee_card.*', photo: 'herman', first_name: 'Herman', name_and_title: 'Herman Hegeman, BAS', job: 'Systeembeheerder', email: 'herman@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'marten', first_name: 'Marten', name_and_title:'Marten Veldthuis, MSc', job: 'Developer', job2:'Computer Scientist', email: 'marten@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'henk', first_name: 'Henk', name_and_title: 'Henk van der Veen, BSc', job: 'Developer', job2: 'Computer Scientist', email: 'henk@roqua.nl'
-      .col.s6.m4.l3.offset-l1
-        = render '/_employee_card.*', photo: 'ellen', first_name: 'Ellen', name_and_title: 'Ellen Visser, PhD', job: 'Data-analist', job2: 'Trainer', email: 'ellen@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'inge', first_name: 'Inge', name_and_title: 'Inge ten Vaarwerk, MSc', job: 'Ontwerp en advies vragenlijsten', email: 'inge@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'arnold', first_name: 'Arnold', name_and_title: 'Arnold van der Meulen', job: 'Developer', job2: 'Computer Scientist', email: 'arnold@roqua.nl'
-      .col.s6.m4.l3.offset-l1
-        = render '/_employee_card.*', photo: 'rei', first_name: 'Rei', name_and_title: 'Rei Monden, PhD', job: 'R Developer', job2: 'Statisticus', email: 'rei@roqua.nl'
-      .col.s6.m4.l3
-        = render '/_employee_card.*', photo: 'jij', first_name: 'Jij?', name_and_title: 'Developer', job: "Wij zijn altijd geïnteresseerd in talent, we nodigen je graag een keertje uit op de #{link_to 'thee of koffie', @items['/career.*'].path} !"
+      - PEOPLE.each_with_index do |person, idx|
+        .col.s6.m4.l3{class: (idx % 3 == 0 ? "offset-l1" : "")}
+          = render '/_employee_card.*', **person
 
   .container
     .row
       .col.s12.m12.l9.offset-l1
         %p.thin Het team wordt regelmatig tijdelijk versterkt door een Informatica student van de Hanzehogeschool of de Rijksuniversiteit Groningen die zijn/haar stage of afstudeeronderzoek bij RoQua doet.
+
+  .container
+    %h2.header.text_b alumni:
+    .row
+      - ALUMNI.each_with_index do |person, idx|
+        .col.s6.m4.l3{class: (idx % 3 == 0 ? "offset-l1" : "")}
+          = render '/_employee_card.*', **person
+
 
   #page-section-achtergrond
   .divider
