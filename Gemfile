@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'nanoc'
 gem 'sass'
-gem 'haml'
+gem 'haml', '~> 5.1'
 gem 'coffee-script'
 
 group :development do
@@ -10,7 +10,6 @@ group :development do
   gem 'rake'
   gem 'dotenv'
   gem 'httparty'
-  gem 'guard-process'
   gem 'nokogiri'
-  gem 'guard-nanoc'
+  gem 'nanoc-live'
 end

@@ -3,7 +3,7 @@ title: About
 ---
 
 :ruby
-  PEOPLE = [
+  @people = [
     {photo: 'erwin', first_name: 'Erwin',name_and_title: 'Erwin Veermans, MSc', job: 'Technisch projectleider', job2: 'ICT-er / Natuurkundige', extra_info: 'Mede-oprichter', email: 'erwin@roqua.nl'},
     {photo: 'dennis', first_name: 'Dennis',name_and_title: 'Dennis Raven, PhD', job: 'Wetenschappelijk coördinator', job2: 'Socioloog / Bedrijfskundige', email: 'dennis@roqua.nl'},
     {photo: 'herman', first_name: 'Herman', name_and_title: 'Herman Hegeman, BAS', job: 'Systeembeheerder', email: 'herman@roqua.nl'},
@@ -15,7 +15,7 @@ title: About
     {photo: 'jij', first_name: 'Jij?', name_and_title: 'Developer', job: "Wij zijn altijd geïnteresseerd in talent, we nodigen je graag een keertje uit op de #{link_to 'thee of koffie', @items['/career.*'].path} !"}
   ]
 
-  ALUMNI = [
+  @alumni = [
     {photo: 'sjoerd', first_name: 'Sjoerd', name_and_title: 'Sjoerd Sytema, PhD', job: 'Inhoudelijk projectleider', job2: 'Socioloog', extra_info: 'Mede-oprichter'},
     {photo: 'arnold', first_name: 'Arnold', name_and_title: 'Arnold van der Meulen', job: 'Developer', job2: 'Computer Scientist'},
     {photo: 'rei', first_name: 'Rei', name_and_title: 'Rei Monden, PhD', job: 'R Developer', job2: 'Statisticus', email: 'rei@roqua.nl'},
@@ -31,7 +31,7 @@ title: About
   .container
     %h2.header.text_b wij:
     .row
-      - PEOPLE.each_with_index do |person, idx|
+      - @people.each_with_index do |person, idx|
         .col.s6.m4.l3{class: (idx % 3 == 0 ? "offset-l1" : "")}
           = render '/_employee_card.*', **person
 
@@ -43,7 +43,7 @@ title: About
   .container
     %h2.header.text_b alumni:
     .row
-      - ALUMNI.each_with_index do |person, idx|
+      - @alumni.each_with_index do |person, idx|
         .col.s6.m4.l3{class: (idx % 3 == 0 ? "offset-l1" : "")}
           = render '/_employee_card.*', **person
 

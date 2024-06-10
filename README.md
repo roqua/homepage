@@ -21,7 +21,7 @@ Marketing website for RoQua
 3. Work on your branch. Make sure it builds properly. Tip: You can use guard to do compiling for you.
 
    ```bash
-   bundle exec guard
+   bundle exec nanoc -W
    ```
 
 4. Ensure it looks good
