@@ -10,7 +10,6 @@ group :development do
   gem 'rake'
   gem 'dotenv'
   gem 'httparty'
-  gem 'guard-bundler'
   gem 'guard-process'
   gem 'nokogiri'
   gem 'guard-nanoc'
