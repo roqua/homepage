@@ -41,7 +41,7 @@ jobs:
           HOST: ${{ secrets.SERVER_IP }}
           USERNAME: ${{ secrets.SSH_USER }}
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE_PATH: "./build/"
+          SOURCE_PATH: "./output/"
           TARGET_PATH: "~/roqua_frontpage/html/"
           PORT: 22
           RSYNC_PARAMETERS: ""
